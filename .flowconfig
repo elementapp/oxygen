@@ -16,6 +16,8 @@
 ; Ignore polyfills
 .*/Libraries/polyfills/.*
 
+.*/node_modules/*
+
 [include]
 
 [libs]
@@ -30,6 +32,9 @@ module.system=haste
 munge_underscores=true
 
 module.name_mapper='^[./a-zA-Z0-9$_-]+\.\(bmp\|gif\|jpg\|jpeg\|png\|psd\|svg\|webp\|m4v\|mov\|mp4\|mpeg\|mpg\|webm\|aac\|aiff\|caf\|m4a\|mp3\|wav\|html\|pdf\)$' -> 'RelativeImageStub'
+module.name_mapper='\(react-native\)' -> 'oxygen/modulesStub'
+module.name_mapper='\(react-redux\)' -> 'oxygen/modulesStub'
+module.name_mapper='redux\(-thunk\)?' -> 'oxygen/modulesStub'
 
 suppress_type=$FlowIssue
 suppress_type=$FlowFixMe
@@ -45,4 +50,4 @@ suppress_comment=\\(.\\|\n\\)*\\$FlowExpectedError
 unsafe.enable_getters_and_setters=true
 
 [version]
-^0.57.0
+^0.61.0
