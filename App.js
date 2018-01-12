@@ -11,8 +11,8 @@ import {
 } from 'react-native';
 import {Provider} from 'react-redux';
 
+import {Map} from 'oxygen/Map/Map';
 import {getStore} from 'stores/getStore';
-
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -28,15 +28,15 @@ export default class App extends Component<void, void> {
     return (
       <Provider store={store}>
         <View style={styles.container}>
-          <Text style={styles.welcome}>
-            Welcome to React Native!
-          </Text>
-          <Text style={styles.instructions}>
-            To get started, edit App.js
-          </Text>
-          <Text style={styles.instructions}>
-            {instructions}
-          </Text>
+          <Map
+            style={styles.map}
+            region={{
+              latitude: 37.78825,
+              longitude: -122.4324,
+              latitudeDelta: 0.0922,
+              longitudeDelta: 0.0421,
+            }}
+          />
         </View>
       </Provider>
     );
@@ -46,9 +46,15 @@ export default class App extends Component<void, void> {
 const styles = StyleSheet.create({
   container: {
     flex: 1,
-    justifyContent: 'center',
+    justifyContent: 'flex-end',
     alignItems: 'center',
-    backgroundColor: '#F5FCFF',
+  },
+  map: {
+    position: 'absolute',
+    top: 0,
+    left: 0,
+    right: 0,
+    bottom: 0,
   },
   welcome: {
     fontSize: 20,

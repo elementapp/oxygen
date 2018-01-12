@@ -1,4 +1,8 @@
-function testReducer(initialState = {}, action) {
+/**
+ * @flow
+ */
+
+function testReducer(initialState: {} = {}, action: string) {
   return initialState;
 }
 
