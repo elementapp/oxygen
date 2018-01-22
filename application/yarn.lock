@@ -10,9 +10,19 @@
     esutils "^2.0.2"
     js-tokens "^3.0.0"
 
+"@panter/react-animation-frame@^0.3.7":
+  version "0.3.7"
+  resolved "https://registry.yarnpkg.com/@panter/react-animation-frame/-/react-animation-frame-0.3.7.tgz#31a0d7683e4a8d2e1b29ff512cad36513bd43d00"
+  dependencies:
+    react "15.4.2"
+
 "@types/node@*":
   version "8.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.2.tgz#83b8103fa9a2c2e83d78f701a9aa7c9539739aa5"
+
+"_PocketSVG@git+https://github.com/pocketsvg/PocketSVG.git":
+  version "0.0.0"
+  resolved "git+https://github.com/pocketsvg/PocketSVG.git#5405d0f5838c1242e79b490c6ddf738779e4d5c0"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -1615,7 +1625,7 @@ fbjs-scripts@^0.8.1:
     semver "^5.1.0"
     through2 "^2.0.0"
 
-fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.9:
+fbjs@^0.8.14, fbjs@^0.8.16, fbjs@^0.8.4, fbjs@^0.8.9:
   version "0.8.16"
   resolved "https://registry.yarnpkg.com/fbjs/-/fbjs-0.8.16.tgz#5e67432f550dc41b572bf55847b8aca64e5337db"
   dependencies:
@@ -3415,7 +3425,7 @@ promise@^7.1.1:
   dependencies:
     asap "~2.0.3"
 
-prop-types@^15.5.10, prop-types@^15.5.8, prop-types@^15.6.0:
+prop-types@^15.5.10, prop-types@^15.5.7, prop-types@^15.5.8, prop-types@^15.6.0:
   version "15.6.0"
   resolved "https://registry.yarnpkg.com/prop-types/-/prop-types-15.6.0.tgz#ceaf083022fc46b4a35f69e13ef75aed0d639856"
   dependencies:
@@ -3497,6 +3507,16 @@ react-devtools-core@^2.5.0:
   dependencies:
     shell-quote "^1.6.1"
     ws "^2.0.3"
+
+react-native-arkit@^0.8.0-beta.0:
+  version "0.8.0-beta.0"
+  resolved "https://registry.yarnpkg.com/react-native-arkit/-/react-native-arkit-0.8.0-beta.0.tgz#950738f8bbbe6da113994fa21b95647ae1b7d7e4"
+  dependencies:
+    "@panter/react-animation-frame" "^0.3.7"
+    "_PocketSVG" "https://github.com/pocketsvg/PocketSVG"
+    fast-deep-equal "^1.0.0"
+    lodash "^4.17.4"
+    prop-types "^15.5.7"
 
 react-native-maps@^0.19.0:
   version "0.19.0"
@@ -3595,6 +3615,14 @@ react-transform-hmr@^1.0.4:
   dependencies:
     global "^4.3.0"
     react-proxy "^1.1.7"
+
+react@15.4.2:
+  version "15.4.2"
+  resolved "https://registry.yarnpkg.com/react/-/react-15.4.2.tgz#41f7991b26185392ba9bae96c8889e7e018397ef"
+  dependencies:
+    fbjs "^0.8.4"
+    loose-envify "^1.1.0"
+    object-assign "^4.1.0"
 
 react@16.0.0:
   version "16.0.0"
