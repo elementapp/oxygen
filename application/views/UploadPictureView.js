@@ -59,14 +59,36 @@ export class UploadPictureView extends React.PureComponent<Props, State> {
   }
 
   onSendPicture = () => {
-    // TODO (paul)
+    if (!this.state.source) {
+      return;
+    }
+
+    const data = new FormData();
+    data.append('title', 'Swap sucks');
+    data.append('image', {
+      uri: this.state.source.uri,
+      type: 'image/jpeg',
+      name: 'test_photo',
+    });
+    fetch('http://andrew.local:80/image', {
+      method: 'POST',
+      body: data,
+    }).then(res => {
+      console.log(res)
+    }).catch(error => {
+      console.log(error)
+    });
   }
 
   render() {
     return (
-      <View>
-        <Button onPress={this.onSelectPicture} title="Select picture" />
-        <Button onPress={this.onSendPicture} title="Send picture" />
+      <View style={styles.container}>
+        <View style={styles.button}>
+          <Button onPress={this.onSelectPicture} title="Select picture" />
+        </View>
+        <View style={styles.button}>
+          <Button color="green" onPress={this.onSendPicture} title="Send picture" />
+        </View>
         <Image source={this.state.source} style={styles.preview} />
       </View>
     );
@@ -75,8 +97,16 @@ export class UploadPictureView extends React.PureComponent<Props, State> {
 
 const styles = StyleSheet.create({
   container: {
-    backgroundColor: 'red',
+    alignItems: 'center',
     flex: 1,
+    justifyContent: 'center',
+  },
+  button: {
+    borderColor: 'black',
+    borderRadius: 4,
+    borderWidth: 2,
+    marginBottom: 15,
+    width: 150,
   },
   preview: {
     height: 500,
