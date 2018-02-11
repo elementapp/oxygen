@@ -13,6 +13,7 @@ import {Provider} from 'react-redux';
 
 import {Map} from 'oxygen/Map/Map';
 import {getStore} from 'stores/getStore';
+import {UploadPictureView} from 'oxygen/views/UploadPictureView';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -28,6 +29,7 @@ export default class App extends Component<void, void> {
     return (
       <Provider store={store}>
         <View style={styles.container}>
+          {/*
           <Map
             style={styles.map}
             region={{
@@ -37,6 +39,8 @@ export default class App extends Component<void, void> {
               longitudeDelta: 0.0421,
             }}
           />
+          */}
+          <UploadPictureView />
         </View>
       </Provider>
     );

@@ -20,9 +20,9 @@
   version "8.5.2"
   resolved "https://registry.yarnpkg.com/@types/node/-/node-8.5.2.tgz#83b8103fa9a2c2e83d78f701a9aa7c9539739aa5"
 
-"_PocketSVG@git+https://github.com/pocketsvg/PocketSVG.git":
+"_PocketSVG@https://github.com/pocketsvg/PocketSVG":
   version "0.0.0"
-  resolved "git+https://github.com/pocketsvg/PocketSVG.git#5405d0f5838c1242e79b490c6ddf738779e4d5c0"
+  resolved "https://github.com/pocketsvg/PocketSVG#5405d0f5838c1242e79b490c6ddf738779e4d5c0"
 
 abab@^1.0.3:
   version "1.0.4"
@@ -3517,6 +3517,10 @@ react-native-arkit@^0.8.0-beta.0:
     fast-deep-equal "^1.0.0"
     lodash "^4.17.4"
     prop-types "^15.5.7"
+
+react-native-image-picker@^0.26.7:
+  version "0.26.7"
+  resolved "https://registry.yarnpkg.com/react-native-image-picker/-/react-native-image-picker-0.26.7.tgz#ad2ee957f7f6cc01396893ea03d84cb2adb2e376"
 
 react-native-maps@^0.19.0:
   version "0.19.0"
