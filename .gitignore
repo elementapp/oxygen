@@ -53,5 +53,10 @@ buck-out/
 */fastlane/Preview.html
 */fastlane/screenshots
 
+<<<<<<< Updated upstream
 # Pods
 Pods
+=======
+__pycache__/
+*.pyc
+>>>>>>> Stashed changes

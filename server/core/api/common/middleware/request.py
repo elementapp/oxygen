@@ -7,22 +7,22 @@ from ..database import db_session
 from ..exceptions import InvalidContentType, InvalidPermissions
 
 
-def ensure_content_type():
-    """
-    Ensures that the Content-Type for all requests
-    is `application-json`, otherwise appropriate error
-    is raised.
-    :raises: InvalidContentType if Content-Type is not `application-json`
-    """
-    content_type = request.headers.get('Content-type')
-    if not content_type == 'application/json':
-        raise InvalidContentType(
-            message='Invalid content-type. Only `application-json` is allowed.'
-        )
+# def ensure_content_type():
+#     """
+#     Ensures that the Content-Type for all requests
+#     is `application-json`, otherwise appropriate error
+#     is raised.
+#     :raises: InvalidContentType if Content-Type is not `application-json`
+#     """
+#     content_type = request.headers.get('Content-type')
+#     if request.method == 'GET' and not content_type == 'application/json':
+#         raise InvalidContentType(
+#             message='Invalid content-type. Only `application-json` is allowed.'
+#         )
 
 
 def ensure_public_unavailability():
-    if not request.headers.get('_secure_key', '') == os.environ.get('SECURE_API_KEY'):
+    if not request.headers.get('_secure_key', '') == os.environ.get('SECURE_API_KEY', ''):
         raise InvalidPermissions(
             message='You don\'t have enough permissions to perform this action.'
         )
