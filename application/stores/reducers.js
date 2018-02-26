@@ -2,10 +2,8 @@
  * @flow
  */
 
-function testReducer(initialState: {} = {}, action: string) {
-  return initialState;
-}
+import {viewsReducer as views} from 'oxygen/views/viewsReducer';
 
 export default {
-  testReducer,
+  views,
 };

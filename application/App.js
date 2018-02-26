@@ -13,7 +13,7 @@ import {Provider} from 'react-redux';
 
 import {Map} from 'oxygen/Map/Map';
 import {getStore} from 'stores/getStore';
-import {UploadPictureView} from 'oxygen/views/UploadPictureView';
+import {ViewController} from 'oxygen/views/ViewController';
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' +
@@ -40,7 +40,7 @@ export default class App extends Component<void, void> {
             }}
           />
           */}
-          <UploadPictureView />
+          <ViewController />
         </View>
       </Provider>
     );
